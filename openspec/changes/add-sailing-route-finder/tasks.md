@@ -126,4 +126,4 @@
   - a link to `assumptions.md`.
 
   Verify by following it from a clean checkout.
-- [ ] 7.3 Run `bundle exec rubocop` and fix the offences. Commit all work on `feature/sailing-route-finder` and produce `git archive --format=zip -o shypple-route-finder.zip feature/sailing-route-finder`. Verify that the unzipped folder builds and answers a piped search.
+- [x] 7.3 Run `bundle exec rubocop` and fix the offences. Commit all work on `feature/sailing-route-finder` and produce `git archive --format=zip -o shypple-route-finder.zip feature/sailing-route-finder`. Verify that the unzipped folder builds and answers a piped search.
