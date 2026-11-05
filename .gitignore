@@ -1,0 +1,5 @@
+data/
+coverage/
+.DS_Store
+.bundle/
+vendor/
