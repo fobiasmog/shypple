@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Composition root: reads configuration from the environment, wires the real
+# collaborators together and exits with the CLI's status.
+#   FEED_PATH  feed JSON (default: response.json next to bin/)
+#   REDIS_URL  saved-search storage (default: redis://localhost:6379/0)
+
+require "bundler/setup"
+require_relative "../lib/route_finder"
+
+feed_path = ENV.fetch("FEED_PATH", File.expand_path("../response.json", __dir__))
+redis = Redis.new(url: ENV.fetch("REDIS_URL", "redis://localhost:6379/0"))
+
+exit Shypple::CLI.new(
+  feed_path:,
+  store: Shypple::SavedSearchStore::RedisStore.new(redis),
+  stdin: $stdin, stdout: $stdout, stderr: $stderr
+).run

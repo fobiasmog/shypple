@@ -1,0 +1,9 @@
+.git
+.bundle
+.claude
+.DS_Store
+coverage
+data
+openspec
+vendor
+*.zip

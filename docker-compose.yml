@@ -1,0 +1,24 @@
+services:
+  redis:
+    image: redis:7.4-alpine
+    # Default RDB snapshots only; no append-only file (see assumptions.md).
+    command: ["redis-server", "--appendonly", "no"]
+    volumes:
+      - ./data/redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  app:
+    build: .
+    stdin_open: true
+    environment:
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      # Bind-mounted so a replaced feed is read by the next run without a rebuild.
+      - ./response.json:/app/response.json:ro
+    depends_on:
+      redis:
+        condition: service_healthy

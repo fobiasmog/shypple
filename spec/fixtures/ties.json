@@ -1,0 +1,15 @@
+{
+  "sailings": [
+    { "origin_port": "CNSHA", "destination_port": "ESBCN", "departure_date": "2022-01-29", "arrival_date": "2022-02-05", "sailing_code": "AAAA" },
+    { "origin_port": "CNSHA", "destination_port": "NLRTM", "departure_date": "2022-01-29", "arrival_date": "2022-02-12", "sailing_code": "DDDD" },
+    { "origin_port": "ESBCN", "destination_port": "NLRTM", "departure_date": "2022-02-06", "arrival_date": "2022-02-12", "sailing_code": "BBBB" },
+    { "origin_port": "CNSHA", "destination_port": "NLRTM", "departure_date": "2022-01-28", "arrival_date": "2022-02-11", "sailing_code": "EEEE" }
+  ],
+  "rates": [
+    { "sailing_code": "AAAA", "rate": "100.00", "rate_currency": "EUR" },
+    { "sailing_code": "DDDD", "rate": "300.00", "rate_currency": "EUR" },
+    { "sailing_code": "BBBB", "rate": "200.00", "rate_currency": "EUR" },
+    { "sailing_code": "EEEE", "rate": "300.00", "rate_currency": "EUR" }
+  ],
+  "exchange_rates": {}
+}

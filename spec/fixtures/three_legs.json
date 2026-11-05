@@ -1,0 +1,17 @@
+{
+  "sailings": [
+    { "origin_port": "ESBCN", "destination_port": "NLRTM", "departure_date": "2022-03-01", "arrival_date": "2022-03-05", "sailing_code": "LEG3" },
+    { "origin_port": "CNSHA", "destination_port": "SGSIN", "departure_date": "2022-01-29", "arrival_date": "2022-02-05", "sailing_code": "LEG1" },
+    { "origin_port": "ESBCN", "destination_port": "NLRTM", "departure_date": "2022-02-10", "arrival_date": "2022-02-14", "sailing_code": "EARL" },
+    { "origin_port": "SGSIN", "destination_port": "ESBCN", "departure_date": "2022-02-07", "arrival_date": "2022-02-25", "sailing_code": "LEG2" }
+  ],
+  "rates": [
+    { "sailing_code": "LEG3", "rate": "50.00", "rate_currency": "EUR" },
+    { "sailing_code": "LEG1", "rate": "100.00", "rate_currency": "USD" },
+    { "sailing_code": "EARL", "rate": "10.00", "rate_currency": "EUR" },
+    { "sailing_code": "LEG2", "rate": "200.00", "rate_currency": "EUR" }
+  ],
+  "exchange_rates": {
+    "2022-01-29": { "usd": 1.1138, "jpy": 130.85 }
+  }
+}

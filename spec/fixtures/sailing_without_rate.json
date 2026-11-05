@@ -1,0 +1,26 @@
+{
+  "sailings": [
+    {
+      "origin_port": "CNSHA",
+      "destination_port": "NLRTM",
+      "departure_date": "2022-01-29",
+      "arrival_date": "2022-02-05",
+      "sailing_code": "ZZZZ"
+    },
+    {
+      "origin_port": "CNSHA",
+      "destination_port": "NLRTM",
+      "departure_date": "2022-01-29",
+      "arrival_date": "2022-02-15",
+      "sailing_code": "QRST"
+    }
+  ],
+  "rates": [
+    {
+      "sailing_code": "QRST",
+      "rate": "761.96",
+      "rate_currency": "EUR"
+    }
+  ],
+  "exchange_rates": {}
+}
