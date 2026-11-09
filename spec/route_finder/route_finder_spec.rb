@@ -11,23 +11,7 @@ RSpec.describe Shypple::RouteFinder do
 
   def skipped_codes(result) = result.skipped.keys.map(&:code)
 
-  # Accepts every sailing and records each candidate route in the order the
-  # finder produces them. Any object with these four methods is a criterion.
-  let(:recorder) do
-    Class.new do
-      attr_reader :candidates
-
-      def initialize = @candidates = []
-      def max_legs = nil
-      def eligible?(_sailing) = true
-      def skip_reason(_sailing) = "never"
-
-      def score(route)
-        @candidates << route.legs.map(&:code)
-        0
-      end
-    end.new
-  end
+  let(:recorder) { RecordingCriterion.new }
 
   describe "on the sample feed, CNSHA to NLRTM" do
     it "finds ABCD as the cheapest direct sailing (589.30 USD, about 523.36 EUR)" do
